@@ -1,0 +1,24 @@
+%titles {
+  color: #FFF;
+}
+
+.title {
+  @extend %titles;
+  font-size: 3em;
+  line-height: 1.5em;
+  letter-spacing: -1px;
+}
+
+.subtitle{
+  @extend %titles;
+  font-size: 2em;
+
+  &--black{
+    @extend .subtitle;
+    color: #000;
+  }
+}
+
+*{
+  font-family:sans-serif;
+}

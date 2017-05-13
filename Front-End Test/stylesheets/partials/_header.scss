@@ -1,0 +1,21 @@
+.header {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  &__item{
+
+    &:first-child{
+      flex-shrink: 1;
+    }
+
+    &:last-child{
+      flex-grow: 2;
+    }
+
+
+
+
+  }
+}

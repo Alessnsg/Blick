@@ -1,0 +1,131 @@
+%comparative-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%tile {
+  color: $titles-color;
+}
+
+%quite {
+  color: $square-text;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+
+  &__item{
+
+
+
+    &:first-child{
+      margin-top: 5em;
+      text-align: center;
+    }
+    
+    &:nth-child(2){
+      text-align: center;
+    }
+  }
+}
+
+.signup{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #eee;
+
+  &__item{
+    margin-bottom: 5em;
+  }
+
+  &__title{
+    margin: 1em 0 0.5em 0;
+  }
+
+  &__link{
+    color: #FFF;
+    margin: 0 1em;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+
+    &:nth-child(1){
+      background-color: $titles-color;
+    }
+    &:nth-child(2){
+      background-color: $button-color;
+    }
+  }
+
+}
+
+.comparative {
+  padding: 100px 100px 50px 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+
+  &__item {
+    @extend %comparative-child;
+    padding: 0.5em 4em;
+
+    &:first-child{
+      grid-column: 2 / 4;
+      justify-content: space-around;
+      align-items: center;
+
+    }
+
+    &:nth-child(2){
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      @extend .subtitle--black
+    }
+
+    &:nth-child(3){
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      @extend %tile;
+      border-bottom: 1px solid #eee
+    }
+
+    &:nth-child(4){
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+      @extend %quite;
+      border-bottom: 1px solid #eee
+    }
+
+    &:nth-child(5){
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+      @extend .subtitle--black;
+
+
+    }
+    &:nth-child(6){
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      @extend %tile;
+      border-bottom: 1px solid #eee
+    }
+    &:nth-child(7){
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      @extend %quite;
+      border-bottom: 1px solid #eee
+    }
+  }
+}
+
+.vs {
+  @extend %comparative-child;
+  color: white;
+  font-size: 0.8em;
+  height: 2rem;
+  width: 2rem;
+  background-color: $titles-color;
+  border-radius: 50%;
+}

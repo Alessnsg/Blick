@@ -1,0 +1,29 @@
+.nav {
+  padding: 1em;
+  background-color: #fff;
+
+  &__item {
+
+    &:first-child {
+      display: flex;
+      justify-content: flex-end;
+      align-items:center;
+    }
+  }
+
+  &__link {
+    margin: 0 1em;
+  }
+}
+
+.ul {
+  list-style: none;
+
+  &__item{
+    &:last-child{
+      background-color: $button-color;
+      border-radius: 25px;
+      padding: 0.5em 1em;
+    }
+  }
+}

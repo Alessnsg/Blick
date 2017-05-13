@@ -1,0 +1,21 @@
+*,:before,:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: inherit;
+  margin: inherit;
+  padding: inherit;
+}
+
+.link{
+  text-decoration: none;
+
+  &:active {
+    color: $primary-color
+  }
+
+}
+
